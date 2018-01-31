@@ -1,10 +1,10 @@
-FROM python:3.6.4-jessie
+FROM python:alpine
 
 WORKDIR /opt/demo-app
 
 ADD . /opt/demo-app
 
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 5000
 
